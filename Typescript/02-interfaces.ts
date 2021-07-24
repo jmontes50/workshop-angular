@@ -1,5 +1,9 @@
 //Contrato
 
+interface iAlmacenamiento {
+    capacidad:string
+}
+
 interface iSmartphone {
     modelo:string,
     fabricante:string,
@@ -8,7 +12,9 @@ interface iSmartphone {
     pantalla:number,
     giroscopio:boolean,
     doblechip?:boolean, //para que sean opcionales, agregamos un ? después del nombre de la propiedad
-    readonly IMEI:number
+    readonly IMEI:number,
+    colores?:Array<string>,
+    storage:iAlmacenamiento
 }
 
 let Modelo1:iSmartphone = {
@@ -19,7 +25,10 @@ let Modelo1:iSmartphone = {
     pantalla:6.7,
     giroscopio:true,
     doblechip:false,
-    IMEI:723947239572
+    IMEI:723947239572,
+    storage:{
+        capacidad:"128gb"
+    }
 }
 
 Modelo1.anio = 2021
