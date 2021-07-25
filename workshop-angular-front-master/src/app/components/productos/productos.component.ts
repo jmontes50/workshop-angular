@@ -17,6 +17,7 @@ export class ProductosComponent implements OnInit {
     .subscribe(
       (datos) => {
       console.log(datos)
+      this.misProductos = datos.content
     },(error) => {
       console.error(error)
     })
