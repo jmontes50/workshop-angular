@@ -1,0 +1,11 @@
+<!-- property binding, es del controlador hacia la vista y se referenciar con [] -->
+<img [src]="url" alt="foto">
+<hr>
+
+<!-- Two Way Data Binding -->
+<input type="text" [(ngModel)]="tarea">
+
+<!-- Event Binding, es de la vista hacia el controlador -->
+<button (click)="agregarTarea()">
+    Agregar Tarea
+</button>

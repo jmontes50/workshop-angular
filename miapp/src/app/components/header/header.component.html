@@ -1,0 +1,35 @@
+<p>{{titulo}}</p>
+<p>{{10 + 5}}</p>
+
+<!-- ngFor -->
+<ul>
+    <li *ngFor="let nom of nombres">
+        {{nom}}
+    </li>
+</ul>
+
+<!-- ngIf -->
+<div *ngIf="logueado else noLogueado">
+    Bienvenido Usuario
+</div>
+<ng-template #noLogueado>
+    Amigo Ingresa por favor
+</ng-template>
+
+<ul 
+    *ngFor="let per of personas"
+    [ngSwitch]="per.ciudad"
+>
+    <li *ngSwitchCase="'Cusco'" style="color:blue">
+        {{per.nombre}}
+    </li>
+    <li *ngSwitchCase="'Tacna'" style="color:purple">
+        {{per.nombre}}
+    </li>
+    <li *ngSwitchCase="'Lima'" style="color:orangered">
+        {{per.nombre}}
+    </li>
+    <li *ngSwitchCase="'Arequipa'" style="color:darkcyan">
+        {{per.nombre}}
+    </li>
+</ul>
