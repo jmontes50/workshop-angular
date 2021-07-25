@@ -9,3 +9,13 @@
 <button (click)="agregarTarea()">
     Agregar Tarea
 </button>
+<br>
+<ul>
+    <li *ngFor="let tar of listaTareas">
+        {{tar}}
+    </li>
+</ul>
+
+<button (click)="guardarTareas()">
+    Guardar
+</button>
